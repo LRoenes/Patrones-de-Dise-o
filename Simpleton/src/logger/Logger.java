@@ -12,7 +12,6 @@ import java.io.IOException;
  * @author Luis
  */
 public class Logger {
-    private static Logger instance;
     private FileWriter writer;
     
     private Logger(){
@@ -24,10 +23,11 @@ public class Logger {
     }
     
     public static Logger getInstance(){
-        if(instance == null){
-            instance = new Logger();
-        }
-        return instance;
+        return Holder.INSTANCE;
+    }
+    
+    private static class Holder {
+        private static final Logger INSTANCE = new Logger();
     }
     
     public void log(String message){
