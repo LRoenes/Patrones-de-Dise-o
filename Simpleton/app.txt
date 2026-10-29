@@ -1,0 +1,4 @@
+Usuario autenticado correctamente.
+Pago procesado con éxito.
+Usuario autenticado correctamente.
+Pago procesado con éxito.
